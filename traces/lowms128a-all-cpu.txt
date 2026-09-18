@@ -1,0 +1,382 @@
+
+#### pipeline `all` on 'lowms128a' ####
+
+=== [keygen lowms128a (Python)] ===
+lowms128a: kind=lowms m=61 D=15625 R=50600 s=25 poly=0x2000000000000027 key only
+=== [keygen lowms128a (Python)] done (2.5s) ===
+
+=== [export lowms128a (Python -> Rust key format)] ===
+export_rust_key: $RELEASE/instances/lowms128a/lowms128a-rs.key.bin (1250 elements), poly x^61+g g=(0x27,0x0)
+=== [export lowms128a (Python -> Rust key format)] done (0.0s) ===
+
+=== [solve lowms128a (Rust kernel finder, block B=8)] ===
++ $RELEASE/rust/target/release/matrixfree-rs solve --key $RELEASE/instances/lowms128a/lowms128a-rs.key.bin --mode block --block 8 --out $RELEASE/instances/lowms128a/kernel.bin
+solve: --m not given, using m=61 from sibling meta.json
+solve: --n not given, using n=50 from sibling meta.json
+solve: --k not given, using k=25 from sibling meta.json
+solve: --lam not given, using lam=3 from sibling meta.json
+field: x^61+g g=(0x27,0x0) (from meta.json)
+setup: m=61 n=50 k=25 lam=3 s=25 N=19600 K=2300 T_and=410000 (dense 45080000) | conditioning on
+[krylov] 0/7383
+[krylov] 33/7383 (0%) elapsed 10s, eta 2269s
+[krylov] 66/7383 (1%) elapsed 20s, eta 2249s
+[krylov] 99/7383 (1%) elapsed 30s, eta 2241s
+[krylov] 132/7383 (2%) elapsed 41s, eta 2227s
+[krylov] 165/7383 (2%) elapsed 51s, eta 2217s
+[krylov] 198/7383 (3%) elapsed 61s, eta 2207s
+[krylov] 231/7383 (3%) elapsed 71s, eta 2198s
+[krylov] 264/7383 (4%) elapsed 81s, eta 2188s
+[krylov] 297/7383 (4%) elapsed 91s, eta 2180s
+[krylov] 330/7383 (4%) elapsed 102s, eta 2169s
+[krylov] 363/7383 (5%) elapsed 112s, eta 2161s
+[krylov] 396/7383 (5%) elapsed 122s, eta 2150s
+[krylov] 429/7383 (6%) elapsed 132s, eta 2141s
+[krylov] 462/7383 (6%) elapsed 142s, eta 2132s
+[krylov] 495/7383 (7%) elapsed 153s, eta 2122s
+[krylov] 528/7383 (7%) elapsed 163s, eta 2112s
+[krylov] 561/7383 (8%) elapsed 173s, eta 2102s
+[krylov] 594/7383 (8%) elapsed 183s, eta 2093s
+[krylov] 627/7383 (8%) elapsed 193s, eta 2083s
+[krylov] 660/7383 (9%) elapsed 204s, eta 2074s
+[krylov] 693/7383 (9%) elapsed 214s, eta 2064s
+[krylov] 726/7383 (10%) elapsed 224s, eta 2054s
+[krylov] 759/7383 (10%) elapsed 234s, eta 2045s
+[krylov] 792/7383 (11%) elapsed 245s, eta 2036s
+[krylov] 825/7383 (11%) elapsed 255s, eta 2025s
+[krylov] 858/7383 (12%) elapsed 265s, eta 2015s
+[krylov] 891/7383 (12%) elapsed 275s, eta 2004s
+[krylov] 924/7383 (13%) elapsed 285s, eta 1993s
+[krylov] 957/7383 (13%) elapsed 295s, eta 1982s
+[krylov] 991/7383 (13%) elapsed 305s, eta 1970s
+[krylov] 1025/7383 (14%) elapsed 316s, eta 1958s
+[krylov] 1059/7383 (14%) elapsed 326s, eta 1947s
+[krylov] 1093/7383 (15%) elapsed 336s, eta 1935s
+[krylov] 1127/7383 (15%) elapsed 347s, eta 1924s
+[krylov] 1160/7383 (16%) elapsed 357s, eta 1913s
+[krylov] 1193/7383 (16%) elapsed 367s, eta 1902s
+[krylov] 1226/7383 (17%) elapsed 377s, eta 1891s
+[krylov] 1260/7383 (17%) elapsed 387s, eta 1880s
+[krylov] 1294/7383 (18%) elapsed 397s, eta 1869s
+[krylov] 1328/7383 (18%) elapsed 407s, eta 1858s
+[krylov] 1362/7383 (18%) elapsed 418s, eta 1847s
+[krylov] 1396/7383 (19%) elapsed 428s, eta 1836s
+[krylov] 1429/7383 (19%) elapsed 438s, eta 1825s
+[krylov] 1462/7383 (20%) elapsed 448s, eta 1815s
+[krylov] 1495/7383 (20%) elapsed 458s, eta 1805s
+[krylov] 1528/7383 (21%) elapsed 468s, eta 1795s
+[krylov] 1561/7383 (21%) elapsed 478s, eta 1785s
+[krylov] 1594/7383 (22%) elapsed 489s, eta 1775s
+[krylov] 1627/7383 (22%) elapsed 499s, eta 1765s
+[krylov] 1660/7383 (22%) elapsed 509s, eta 1754s
+[krylov] 1693/7383 (23%) elapsed 519s, eta 1744s
+[krylov] 1726/7383 (23%) elapsed 529s, eta 1734s
+[krylov] 1759/7383 (24%) elapsed 539s, eta 1724s
+[krylov] 1792/7383 (24%) elapsed 549s, eta 1714s
+[krylov] 1825/7383 (25%) elapsed 560s, eta 1704s
+[krylov] 1858/7383 (25%) elapsed 570s, eta 1695s
+[krylov] 1891/7383 (26%) elapsed 580s, eta 1685s
+[krylov] 1924/7383 (26%) elapsed 590s, eta 1675s
+[krylov] 1957/7383 (27%) elapsed 600s, eta 1665s
+[krylov] 1990/7383 (27%) elapsed 611s, eta 1655s
+[krylov] 2023/7383 (27%) elapsed 621s, eta 1646s
+[krylov] 2056/7383 (28%) elapsed 631s, eta 1636s
+[krylov] 2088/7383 (28%) elapsed 641s, eta 1626s
+[krylov] 2121/7383 (29%) elapsed 652s, eta 1617s
+[krylov] 2153/7383 (29%) elapsed 662s, eta 1607s
+[krylov] 2185/7383 (30%) elapsed 672s, eta 1598s
+[krylov] 2217/7383 (30%) elapsed 682s, eta 1588s
+[krylov] 2250/7383 (30%) elapsed 692s, eta 1579s
+[krylov] 2283/7383 (31%) elapsed 702s, eta 1569s
+[krylov] 2316/7383 (31%) elapsed 713s, eta 1559s
+[krylov] 2348/7383 (32%) elapsed 723s, eta 1549s
+[krylov] 2380/7383 (32%) elapsed 733s, eta 1540s
+[krylov] 2412/7383 (33%) elapsed 743s, eta 1530s
+[krylov] 2445/7383 (33%) elapsed 753s, eta 1521s
+[krylov] 2478/7383 (34%) elapsed 763s, eta 1511s
+[krylov] 2510/7383 (34%) elapsed 773s, eta 1501s
+[krylov] 2542/7383 (34%) elapsed 783s, eta 1491s
+[krylov] 2574/7383 (35%) elapsed 793s, eta 1482s
+[krylov] 2606/7383 (35%) elapsed 803s, eta 1472s
+[krylov] 2639/7383 (36%) elapsed 814s, eta 1462s
+[krylov] 2671/7383 (36%) elapsed 824s, eta 1453s
+[krylov] 2703/7383 (37%) elapsed 834s, eta 1443s
+[krylov] 2736/7383 (37%) elapsed 844s, eta 1433s
+[krylov] 2768/7383 (37%) elapsed 854s, eta 1424s
+[krylov] 2801/7383 (38%) elapsed 864s, eta 1414s
+[krylov] 2833/7383 (38%) elapsed 874s, eta 1404s
+[krylov] 2865/7383 (39%) elapsed 884s, eta 1394s
+[krylov] 2897/7383 (39%) elapsed 894s, eta 1385s
+[krylov] 2930/7383 (40%) elapsed 905s, eta 1375s
+[krylov] 2962/7383 (40%) elapsed 915s, eta 1365s
+[krylov] 2994/7383 (41%) elapsed 925s, eta 1356s
+[krylov] 3026/7383 (41%) elapsed 935s, eta 1346s
+[krylov] 3059/7383 (41%) elapsed 945s, eta 1336s
+[krylov] 3093/7383 (42%) elapsed 955s, eta 1325s
+[krylov] 3127/7383 (42%) elapsed 966s, eta 1314s
+[krylov] 3161/7383 (43%) elapsed 976s, eta 1304s
+[krylov] 3195/7383 (43%) elapsed 986s, eta 1293s
+[krylov] 3229/7383 (44%) elapsed 997s, eta 1282s
+[krylov] 3263/7383 (44%) elapsed 1007s, eta 1271s
+[krylov] 3296/7383 (45%) elapsed 1017s, eta 1261s
+[krylov] 3329/7383 (45%) elapsed 1027s, eta 1251s
+[krylov] 3362/7383 (46%) elapsed 1037s, eta 1241s
+[krylov] 3396/7383 (46%) elapsed 1048s, eta 1230s
+[krylov] 3430/7383 (46%) elapsed 1058s, eta 1219s
+[krylov] 3464/7383 (47%) elapsed 1068s, eta 1208s
+[krylov] 3497/7383 (47%) elapsed 1078s, eta 1198s
+[krylov] 3530/7383 (48%) elapsed 1088s, eta 1188s
+[krylov] 3563/7383 (48%) elapsed 1098s, eta 1177s
+[krylov] 3596/7383 (49%) elapsed 1108s, eta 1167s
+[krylov] 3630/7383 (49%) elapsed 1118s, eta 1156s
+[krylov] 3664/7383 (50%) elapsed 1129s, eta 1146s
+[krylov] 3697/7383 (50%) elapsed 1139s, eta 1135s
+[krylov] 3730/7383 (51%) elapsed 1149s, eta 1125s
+[krylov] 3763/7383 (51%) elapsed 1159s, eta 1115s
+[krylov] 3796/7383 (51%) elapsed 1169s, eta 1105s
+[krylov] 3830/7383 (52%) elapsed 1179s, eta 1094s
+[krylov] 3863/7383 (52%) elapsed 1189s, eta 1084s
+[krylov] 3897/7383 (53%) elapsed 1200s, eta 1073s
+[krylov] 3930/7383 (53%) elapsed 1210s, eta 1063s
+[krylov] 3964/7383 (54%) elapsed 1220s, eta 1052s
+[krylov] 3998/7383 (54%) elapsed 1230s, eta 1042s
+[krylov] 4032/7383 (55%) elapsed 1240s, eta 1031s
+[krylov] 4066/7383 (55%) elapsed 1251s, eta 1020s
+[krylov] 4100/7383 (56%) elapsed 1261s, eta 1010s
+[krylov] 4133/7383 (56%) elapsed 1271s, eta 999s
+[krylov] 4167/7383 (56%) elapsed 1281s, eta 989s
+[krylov] 4200/7383 (57%) elapsed 1291s, eta 979s
+[krylov] 4233/7383 (57%) elapsed 1301s, eta 968s
+[krylov] 4267/7383 (58%) elapsed 1312s, eta 958s
+[krylov] 4300/7383 (58%) elapsed 1322s, eta 948s
+[krylov] 4333/7383 (59%) elapsed 1332s, eta 937s
+[krylov] 4366/7383 (59%) elapsed 1342s, eta 927s
+[krylov] 4399/7383 (60%) elapsed 1352s, eta 917s
+[krylov] 4432/7383 (60%) elapsed 1362s, eta 907s
+[krylov] 4465/7383 (60%) elapsed 1372s, eta 897s
+[krylov] 4498/7383 (61%) elapsed 1383s, eta 887s
+[krylov] 4531/7383 (61%) elapsed 1393s, eta 877s
+[krylov] 4564/7383 (62%) elapsed 1403s, eta 867s
+[krylov] 4597/7383 (62%) elapsed 1413s, eta 857s
+[krylov] 4630/7383 (63%) elapsed 1424s, eta 847s
+[krylov] 4663/7383 (63%) elapsed 1434s, eta 836s
+[krylov] 4695/7383 (64%) elapsed 1444s, eta 827s
+[krylov] 4727/7383 (64%) elapsed 1454s, eta 817s
+[krylov] 4760/7383 (64%) elapsed 1464s, eta 807s
+[krylov] 4793/7383 (65%) elapsed 1474s, eta 797s
+[krylov] 4826/7383 (65%) elapsed 1484s, eta 787s
+[krylov] 4860/7383 (66%) elapsed 1495s, eta 776s
+[krylov] 4894/7383 (66%) elapsed 1505s, eta 765s
+[krylov] 4928/7383 (67%) elapsed 1515s, eta 755s
+[krylov] 4962/7383 (67%) elapsed 1525s, eta 744s
+[krylov] 4995/7383 (68%) elapsed 1536s, eta 734s
+[krylov] 5028/7383 (68%) elapsed 1546s, eta 724s
+[krylov] 5062/7383 (69%) elapsed 1556s, eta 713s
+[krylov] 5095/7383 (69%) elapsed 1566s, eta 703s
+[krylov] 5129/7383 (69%) elapsed 1576s, eta 693s
+[krylov] 5163/7383 (70%) elapsed 1587s, eta 682s
+[krylov] 5196/7383 (70%) elapsed 1597s, eta 672s
+[krylov] 5229/7383 (71%) elapsed 1607s, eta 662s
+[krylov] 5263/7383 (71%) elapsed 1617s, eta 651s
+[krylov] 5297/7383 (72%) elapsed 1627s, eta 641s
+[krylov] 5331/7383 (72%) elapsed 1637s, eta 630s
+[krylov] 5365/7383 (73%) elapsed 1648s, eta 620s
+[krylov] 5398/7383 (73%) elapsed 1658s, eta 610s
+[krylov] 5432/7383 (74%) elapsed 1668s, eta 599s
+[krylov] 5465/7383 (74%) elapsed 1678s, eta 589s
+[krylov] 5499/7383 (74%) elapsed 1688s, eta 578s
+[krylov] 5532/7383 (75%) elapsed 1698s, eta 568s
+[krylov] 5566/7383 (75%) elapsed 1709s, eta 558s
+[krylov] 5599/7383 (76%) elapsed 1719s, eta 548s
+[krylov] 5633/7383 (76%) elapsed 1729s, eta 537s
+[krylov] 5666/7383 (77%) elapsed 1739s, eta 527s
+[krylov] 5700/7383 (77%) elapsed 1749s, eta 517s
+[krylov] 5733/7383 (78%) elapsed 1759s, eta 506s
+[krylov] 5766/7383 (78%) elapsed 1770s, eta 496s
+[krylov] 5799/7383 (79%) elapsed 1780s, eta 486s
+[krylov] 5832/7383 (79%) elapsed 1790s, eta 476s
+[krylov] 5865/7383 (79%) elapsed 1800s, eta 466s
+[krylov] 5898/7383 (80%) elapsed 1810s, eta 456s
+[krylov] 5931/7383 (80%) elapsed 1821s, eta 446s
+[krylov] 5964/7383 (81%) elapsed 1831s, eta 436s
+[krylov] 5997/7383 (81%) elapsed 1841s, eta 425s
+[krylov] 6030/7383 (82%) elapsed 1851s, eta 415s
+[krylov] 6063/7383 (82%) elapsed 1862s, eta 405s
+[krylov] 6096/7383 (83%) elapsed 1872s, eta 395s
+[krylov] 6130/7383 (83%) elapsed 1882s, eta 385s
+[krylov] 6164/7383 (83%) elapsed 1892s, eta 374s
+[krylov] 6198/7383 (84%) elapsed 1902s, eta 364s
+[krylov] 6232/7383 (84%) elapsed 1913s, eta 353s
+[krylov] 6266/7383 (85%) elapsed 1923s, eta 343s
+[krylov] 6300/7383 (85%) elapsed 1933s, eta 332s
+[krylov] 6333/7383 (86%) elapsed 1944s, eta 322s
+[krylov] 6366/7383 (86%) elapsed 1954s, eta 312s
+[krylov] 6399/7383 (87%) elapsed 1964s, eta 302s
+[krylov] 6432/7383 (87%) elapsed 1974s, eta 292s
+[krylov] 6465/7383 (88%) elapsed 1984s, eta 282s
+[krylov] 6498/7383 (88%) elapsed 1994s, eta 272s
+[krylov] 6531/7383 (88%) elapsed 2005s, eta 262s
+[krylov] 6564/7383 (89%) elapsed 2015s, eta 251s
+[krylov] 6597/7383 (89%) elapsed 2025s, eta 241s
+[krylov] 6630/7383 (90%) elapsed 2035s, eta 231s
+[krylov] 6663/7383 (90%) elapsed 2045s, eta 221s
+[krylov] 6697/7383 (91%) elapsed 2056s, eta 211s
+[krylov] 6731/7383 (91%) elapsed 2066s, eta 200s
+[krylov] 6765/7383 (92%) elapsed 2076s, eta 190s
+[krylov] 6799/7383 (92%) elapsed 2086s, eta 179s
+[krylov] 6832/7383 (93%) elapsed 2096s, eta 169s
+[krylov] 6866/7383 (93%) elapsed 2107s, eta 159s
+[krylov] 6899/7383 (93%) elapsed 2117s, eta 149s
+[krylov] 6932/7383 (94%) elapsed 2127s, eta 138s
+[krylov] 6965/7383 (94%) elapsed 2137s, eta 128s
+[krylov] 6998/7383 (95%) elapsed 2147s, eta 118s
+[krylov] 7031/7383 (95%) elapsed 2157s, eta 108s
+[krylov] 7065/7383 (96%) elapsed 2167s, eta 98s
+[krylov] 7098/7383 (96%) elapsed 2177s, eta 87s
+[krylov] 7131/7383 (97%) elapsed 2187s, eta 77s
+[krylov] 7164/7383 (97%) elapsed 2198s, eta 67s
+[krylov] 7197/7383 (97%) elapsed 2208s, eta 57s
+[krylov] 7230/7383 (98%) elapsed 2218s, eta 47s
+[krylov] 7264/7383 (98%) elapsed 2228s, eta 37s
+[krylov] 7298/7383 (99%) elapsed 2238s, eta 26s
+[krylov] 7332/7383 (99%) elapsed 2249s, eta 16s
+[krylov] 7366/7383 (100%) elapsed 2259s, eta 5s
+[approximant basis] 0/7383
+[approximant basis] 190/7383 (3%) elapsed 10s, eta 380s
+[approximant basis] 390/7383 (5%) elapsed 20s, eta 359s
+[approximant basis] 585/7383 (8%) elapsed 30s, eta 350s
+[approximant basis] 781/7383 (11%) elapsed 40s, eta 339s
+[approximant basis] 985/7383 (13%) elapsed 50s, eta 326s
+[approximant basis] 1187/7383 (16%) elapsed 60s, eta 314s
+[approximant basis] 1385/7383 (19%) elapsed 70s, eta 304s
+[approximant basis] 1573/7383 (21%) elapsed 80s, eta 296s
+[approximant basis] 1768/7383 (24%) elapsed 90s, eta 287s
+[approximant basis] 1949/7383 (26%) elapsed 100s, eta 280s
+[approximant basis] 2141/7383 (29%) elapsed 110s, eta 270s
+[approximant basis] 2338/7383 (32%) elapsed 120s, eta 260s
+[approximant basis] 2533/7383 (34%) elapsed 130s, eta 250s
+[approximant basis] 2716/7383 (37%) elapsed 140s, eta 241s
+[approximant basis] 2907/7383 (39%) elapsed 150s, eta 232s
+[approximant basis] 3095/7383 (42%) elapsed 160s, eta 222s
+[approximant basis] 3289/7383 (45%) elapsed 170s, eta 212s
+[approximant basis] 3479/7383 (47%) elapsed 180s, eta 202s
+[approximant basis] 3668/7383 (50%) elapsed 190s, eta 193s
+[approximant basis] 3857/7383 (52%) elapsed 200s, eta 183s
+[approximant basis] 4043/7383 (55%) elapsed 211s, eta 174s
+[approximant basis] 4233/7383 (57%) elapsed 221s, eta 164s
+[approximant basis] 4408/7383 (60%) elapsed 231s, eta 156s
+[approximant basis] 4585/7383 (62%) elapsed 241s, eta 147s
+[approximant basis] 4776/7383 (65%) elapsed 251s, eta 137s
+[approximant basis] 6426/7383 (87%) elapsed 261s, eta 39s
+[reconstruct] 0/2451
+[reconstruct] 32/2451 (1%) elapsed 10s, eta 766s
+[reconstruct] 65/2451 (3%) elapsed 20s, eta 747s
+[reconstruct] 98/2451 (4%) elapsed 30s, eta 729s
+[reconstruct] 132/2451 (5%) elapsed 41s, eta 714s
+[reconstruct] 166/2451 (7%) elapsed 51s, eta 700s
+[reconstruct] 200/2451 (8%) elapsed 61s, eta 688s
+[reconstruct] 233/2451 (10%) elapsed 71s, eta 677s
+[reconstruct] 266/2451 (11%) elapsed 81s, eta 667s
+[reconstruct] 299/2451 (12%) elapsed 91s, eta 657s
+[reconstruct] 333/2451 (14%) elapsed 101s, eta 645s
+[reconstruct] 366/2451 (15%) elapsed 111s, eta 635s
+[reconstruct] 400/2451 (16%) elapsed 122s, eta 624s
+[reconstruct] 434/2451 (18%) elapsed 132s, eta 614s
+[reconstruct] 468/2451 (19%) elapsed 142s, eta 603s
+[reconstruct] 502/2451 (20%) elapsed 153s, eta 592s
+[reconstruct] 536/2451 (22%) elapsed 163s, eta 582s
+[reconstruct] 570/2451 (23%) elapsed 173s, eta 571s
+[reconstruct] 603/2451 (25%) elapsed 183s, eta 561s
+[reconstruct] 636/2451 (26%) elapsed 193s, eta 551s
+[reconstruct] 669/2451 (27%) elapsed 203s, eta 541s
+[reconstruct] 703/2451 (29%) elapsed 213s, eta 531s
+[reconstruct] 737/2451 (30%) elapsed 224s, eta 520s
+[reconstruct] 771/2451 (31%) elapsed 234s, eta 510s
+[reconstruct] 805/2451 (33%) elapsed 244s, eta 499s
+[reconstruct] 839/2451 (34%) elapsed 254s, eta 489s
+[reconstruct] 873/2451 (36%) elapsed 265s, eta 478s
+[reconstruct] 907/2451 (37%) elapsed 275s, eta 468s
+[reconstruct] 939/2451 (38%) elapsed 285s, eta 459s
+[reconstruct] 972/2451 (40%) elapsed 295s, eta 449s
+[reconstruct] 1006/2451 (41%) elapsed 305s, eta 439s
+[reconstruct] 1039/2451 (42%) elapsed 315s, eta 429s
+[reconstruct] 1072/2451 (44%) elapsed 326s, eta 419s
+[reconstruct] 1105/2451 (45%) elapsed 336s, eta 409s
+[reconstruct] 1138/2451 (46%) elapsed 346s, eta 399s
+[reconstruct] 1172/2451 (48%) elapsed 356s, eta 388s
+[reconstruct] 1205/2451 (49%) elapsed 366s, eta 378s
+[reconstruct] 1238/2451 (51%) elapsed 376s, eta 368s
+[reconstruct] 1271/2451 (52%) elapsed 386s, eta 359s
+[reconstruct] 1304/2451 (53%) elapsed 396s, eta 348s
+[reconstruct] 1337/2451 (55%) elapsed 406s, eta 338s
+[reconstruct] 1371/2451 (56%) elapsed 416s, eta 328s
+[reconstruct] 1405/2451 (57%) elapsed 427s, eta 318s
+[reconstruct] 1439/2451 (59%) elapsed 437s, eta 307s
+[reconstruct] 1473/2451 (60%) elapsed 447s, eta 297s
+[reconstruct] 1507/2451 (61%) elapsed 458s, eta 287s
+[reconstruct] 1541/2451 (63%) elapsed 468s, eta 276s
+[reconstruct] 1575/2451 (64%) elapsed 478s, eta 266s
+[reconstruct] 1608/2451 (66%) elapsed 488s, eta 256s
+[reconstruct] 1641/2451 (67%) elapsed 498s, eta 246s
+[reconstruct] 1675/2451 (68%) elapsed 508s, eta 236s
+[reconstruct] 1708/2451 (70%) elapsed 518s, eta 225s
+[reconstruct] 1742/2451 (71%) elapsed 529s, eta 215s
+[reconstruct] 1776/2451 (72%) elapsed 539s, eta 205s
+[reconstruct] 1810/2451 (74%) elapsed 549s, eta 194s
+[reconstruct] 1844/2451 (75%) elapsed 559s, eta 184s
+[reconstruct] 1877/2451 (77%) elapsed 570s, eta 174s
+[reconstruct] 1910/2451 (78%) elapsed 580s, eta 164s
+[reconstruct] 1943/2451 (79%) elapsed 590s, eta 154s
+[reconstruct] 1976/2451 (81%) elapsed 600s, eta 144s
+[reconstruct] 2010/2451 (82%) elapsed 610s, eta 134s
+[reconstruct] 2043/2451 (83%) elapsed 621s, eta 124s
+[reconstruct] 2076/2451 (85%) elapsed 631s, eta 114s
+[reconstruct] 2109/2451 (86%) elapsed 641s, eta 104s
+[reconstruct] 2143/2451 (87%) elapsed 651s, eta 94s
+[reconstruct] 2177/2451 (89%) elapsed 661s, eta 83s
+[reconstruct] 2210/2451 (90%) elapsed 671s, eta 73s
+[reconstruct] 2243/2451 (92%) elapsed 681s, eta 63s
+[reconstruct] 2277/2451 (93%) elapsed 692s, eta 53s
+[reconstruct] 2311/2451 (94%) elapsed 702s, eta 43s
+[reconstruct] 2345/2451 (96%) elapsed 712s, eta 32s
+[reconstruct] 2379/2451 (97%) elapsed 722s, eta 22s
+[reconstruct] 2412/2451 (98%) elapsed 733s, eta 12s
+[reconstruct] 2445/2451 (100%) elapsed 743s, eta 2s
+block(pmb) krylov 7383 steps 2264.1s, approximant basis degs [2449, 2450, 2450, 2450, 2450, 2450, 2450, 2450] (263.2s), batch-Horner attempt 1 -> KERNEL FOUND
+$RELEASE/instances/lowms128a/kernel.bin written (19600 standard coords)
+total 3271.9s
+=== [solve lowms128a (Rust kernel finder, block B=8)] done (3272.0s) ===
+
+=== [recover lowms128a (Python Steps 1-5)] ===
+=== lowms128a: extracting plane from full-Pluecker kernel (C(n,lam)=19600, 16-byte elements, field m=61) ===
+public key: lowms128a-rs.key.bin  [0.0s]
+plane contraction: ok (attempt 1/8)  [0.5s]
+plane verification: ok  [0.5s]
+step3: shift system dim 1, T invertible
+step4: twisted norm = I, fixed space dim = lam
+step5: rowsp(H_hat) == rowsp(ker G)
+key: wt(b_hat)=n, P_hat invertible -> equivalent key verified
+steps 2-5 + key  [1.2s]
+recovery: ok=True stage=done err=None
+EQUIVALENT KEY RECOVERED for lowms128a (lowms key, (61;50,25,3))
+=== [recover lowms128a (Python Steps 1-5)] done (1.2s) ===
+
+=== [demo lowms128a (decrypt with the recovered key alone)] ===
+=== lowms128a: Loidreau PKE vs the recovered equivalent key ((61;50,25,3), t=4) ===
+=== lowms128a: extracting plane from full-Pluecker kernel (C(n,lam)=19600, 16-byte elements, field m=61) ===
+public key: lowms128a-rs.key.bin  [0.0s]
+plane contraction: ok (attempt 1/8)  [0.5s]
+plane verification: ok  [0.5s]
+step3: shift system dim 1, T invertible
+step4: twisted norm = I, fixed space dim = lam
+step5: rowsp(H_hat) == rowsp(ker G)
+key: wt(b_hat)=n, P_hat invertible -> equivalent key verified
+steps 2-5 + key  [1.2s]
+recovery: ok=True stage=done err=None
+encrypting 3 ciphertext(s): t=4, masked rank lam*t=12 vs r/2=12
+trial 0: decrypted with the recovered key, (m, e) match: YES
+trial 1: decrypted with the recovered key, (m, e) match: YES
+trial 2: decrypted with the recovered key, (m, e) match: YES
+=== [demo lowms128a (decrypt with the recovered key alone)] done (2.9s) ===
+
+#### PASS: lowms128a: keygen -> solve -> recover -> decrypt all succeeded ####
+cpu rerun exit: 0

@@ -1,0 +1,5 @@
+# Pinned versions of the release validation run (2026-09-17).
+# galois provides exact GF(2^m) arithmetic; numpy >= 2 works, but the
+# validated combination is the one pinned here.
+galois==0.4.11
+numpy==2.5.3

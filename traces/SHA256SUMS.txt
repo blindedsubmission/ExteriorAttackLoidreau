@@ -1,0 +1,22 @@
+# SHA256 checksums of the deterministic reference artifacts.
+#
+# Every byte of these files is a function of the instance seed and the
+# solver seed (default 1) alone: key generation, the exterior kernel,
+# and the metadata are reproducible bit-for-bit on any machine, build,
+# thread count, or backend (CPU rayon / GPU wgpu), because all field
+# arithmetic is exact and order-free.  After running the pipeline,
+# compare with:  sha256sum -c traces/SHA256SUMS.txt
+#
+# Reference values produced 2026-09-18 with the release tree as
+# shipped; the lowms128a kernel hash is identical for the
+# CPU route (12-core Ryzen) and the GPU route (RX 6800 XT).
+#
+# The registry-key instances below carry the secret key in
+# <name>.key.npz; these -rs.key.bin exports are the PUBLIC keys.
+
+afda2de550ebcb748402529ba94ec4ab63be026e280f865d4e75d932e774bdfc  instances/pipeline-toy/kernel.bin
+165afba9935dd7e8b2fffe7f274c6188217566cd05722a0655da502956358b14  instances/pipeline-toy/pipeline-toy-rs.key.bin
+9a35a9926ebe80de15d9c7de5eb14b189c678963d4409367fe47dd9560c3590b  instances/pipeline-toy/pipeline-toy-rs.meta.json
+60da6fcdbe28ba2c4436884e13905cc98bb8594b4b7f126917aca42653603321  instances/lowms128a/lowms128a-rs.key.bin
+240de0ec806b7ef390003f4d03081c3f6990fed2ff0da00aac7de3bb66605221  instances/lowms128a/lowms128a-rs.meta.json
+dffc2c77f51a5a0011d7fbc14c08943d0e6bb3a4782f2adf5b289311b7bb9618  instances/lowms128a/kernel.bin

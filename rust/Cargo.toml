@@ -1,0 +1,20 @@
+[package]
+name = "matrixfree-rs"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Matrix-free exterior kernel recovery over GF(2^m), m <= 128"
+# Default build is CPU-only (rayon).  The wgpu GPU backend is opt-in:
+#   cargo build --release --features gpu
+[features]
+default = []
+gpu = ["dep:wgpu", "dep:bytemuck", "dep:pollster"]
+
+# Lint policy lives as crate-level attributes at the top of
+# src/main.rs (see the comment there for why not the [lints] table).
+
+[dependencies]
+rayon = "1.12.0"
+bytemuck = { version = "1.25.2", features = ["derive"], optional = true }
+pollster = { version = "1.0.1", optional = true }
+wgpu = { version = "30.0.1", optional = true }

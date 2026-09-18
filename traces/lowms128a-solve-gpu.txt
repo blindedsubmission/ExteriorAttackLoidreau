@@ -1,0 +1,72 @@
+solve: --m not given, using m=61 from sibling meta.json
+solve: --n not given, using n=50 from sibling meta.json
+solve: --k not given, using k=25 from sibling meta.json
+solve: --lam not given, using lam=3 from sibling meta.json
+field: x^61+g g=(0x27,0x0) (from meta.json)
+setup: m=61 n=50 k=25 lam=3 s=25 N=19600 K=2300 T_and=410000 (dense 45080000) | conditioning on
+gpu: AMD Radeon RX 6800 XT (RADV NAVI21) (DiscreteGpu, backend Vulkan)
+[krylov] 0/7383
+[krylov] 192/7383 (3%) elapsed 10s, eta 385s
+[krylov] 384/7383 (5%) elapsed 20s, eta 373s
+[krylov] 576/7383 (8%) elapsed 31s, eta 362s
+[krylov] 768/7383 (10%) elapsed 41s, eta 352s
+[krylov] 960/7383 (13%) elapsed 51s, eta 342s
+[krylov] 1152/7383 (16%) elapsed 61s, eta 331s
+[krylov] 1376/7383 (19%) elapsed 73s, eta 318s
+[krylov] 1600/7383 (22%) elapsed 84s, eta 303s
+[krylov] 1824/7383 (25%) elapsed 95s, eta 289s
+[krylov] 2048/7383 (28%) elapsed 106s, eta 276s
+[krylov] 2272/7383 (31%) elapsed 117s, eta 264s
+[krylov] 2496/7383 (34%) elapsed 128s, eta 251s
+[krylov] 2720/7383 (37%) elapsed 140s, eta 239s
+[krylov] 2944/7383 (40%) elapsed 151s, eta 227s
+[krylov] 3168/7383 (43%) elapsed 162s, eta 215s
+[krylov] 3392/7383 (46%) elapsed 173s, eta 204s
+[krylov] 3616/7383 (49%) elapsed 184s, eta 192s
+[krylov] 3840/7383 (52%) elapsed 195s, eta 180s
+[krylov] 4064/7383 (55%) elapsed 206s, eta 168s
+[krylov] 4288/7383 (58%) elapsed 217s, eta 157s
+[krylov] 4512/7383 (61%) elapsed 228s, eta 145s
+[krylov] 4736/7383 (64%) elapsed 239s, eta 133s
+[krylov] 4960/7383 (67%) elapsed 250s, eta 122s
+[krylov] 5184/7383 (70%) elapsed 261s, eta 111s
+[krylov] 5376/7383 (73%) elapsed 271s, eta 101s
+[krylov] 5568/7383 (75%) elapsed 282s, eta 92s
+[krylov] 5760/7383 (78%) elapsed 292s, eta 82s
+[krylov] 5952/7383 (81%) elapsed 302s, eta 73s
+[krylov] 6176/7383 (84%) elapsed 313s, eta 61s
+[krylov] 6400/7383 (87%) elapsed 325s, eta 50s
+[krylov] 6624/7383 (90%) elapsed 336s, eta 39s
+[krylov] 6816/7383 (92%) elapsed 347s, eta 29s
+[krylov] 7040/7383 (95%) elapsed 358s, eta 17s
+[krylov] 7264/7383 (98%) elapsed 370s, eta 6s
+[approximant basis] 0/7383
+[approximant basis] 194/7383 (3%) elapsed 10s, eta 371s
+[approximant basis] 389/7383 (5%) elapsed 20s, eta 361s
+[approximant basis] 584/7383 (8%) elapsed 30s, eta 350s
+[approximant basis] 784/7383 (11%) elapsed 40s, eta 338s
+[approximant basis] 981/7383 (13%) elapsed 50s, eta 327s
+[approximant basis] 1172/7383 (16%) elapsed 60s, eta 319s
+[approximant basis] 1360/7383 (18%) elapsed 70s, eta 311s
+[approximant basis] 1549/7383 (21%) elapsed 80s, eta 302s
+[approximant basis] 1737/7383 (24%) elapsed 90s, eta 293s
+[approximant basis] 1934/7383 (26%) elapsed 100s, eta 283s
+[approximant basis] 2128/7383 (29%) elapsed 110s, eta 272s
+[approximant basis] 2326/7383 (32%) elapsed 120s, eta 262s
+[approximant basis] 2520/7383 (34%) elapsed 130s, eta 252s
+[approximant basis] 2715/7383 (37%) elapsed 140s, eta 241s
+[approximant basis] 2913/7383 (39%) elapsed 150s, eta 231s
+[approximant basis] 3103/7383 (42%) elapsed 161s, eta 221s
+[approximant basis] 3297/7383 (45%) elapsed 171s, eta 211s
+[approximant basis] 3491/7383 (47%) elapsed 181s, eta 201s
+[approximant basis] 3688/7383 (50%) elapsed 191s, eta 191s
+[approximant basis] 3883/7383 (53%) elapsed 201s, eta 181s
+[approximant basis] 4073/7383 (55%) elapsed 211s, eta 171s
+[approximant basis] 4269/7383 (58%) elapsed 221s, eta 161s
+[approximant basis] 4466/7383 (60%) elapsed 231s, eta 151s
+[approximant basis] 4664/7383 (63%) elapsed 241s, eta 140s
+[approximant basis] 4860/7383 (66%) elapsed 251s, eta 130s
+gpu block(pmb) krylov 7383 steps 375.7s, approximant basis degs [2449, 2450, 2450, 2450, 2450, 2450, 2450, 2450] (258.3s), batch-Horner attempt 1 -> KERNEL FOUND
+instances/lowms128a/kernel-gpu.bin written (19600 standard coords)
+total 741.3s
+gpu solve exit: 0

@@ -1,0 +1,5 @@
+# The crate needs Rust >= 1.85 (edition 2024).  rustup installs a
+# sufficient stable toolchain automatically; a system cargo >= 1.85 also
+# works and simply ignores this file.
+[toolchain]
+channel = "stable"

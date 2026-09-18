@@ -1,0 +1,13 @@
+# Instance registry for the release pipeline: name m n k lam seed kind [s]
+#
+# kind: loidreau = Loidreau PKE structured key (also used by the LowMS
+#       primal route), lowms = LowMS Niederreiter public key (parity-check
+#       model; the primal generator is derived as ker H_pub, the attacker's
+#       view), random = random full-rank control (negative control only).
+#
+# pipeline-toy: smoke-test instance, full pipeline in ~1 minute.
+pipeline-toy       24  16  10   3     7  loidreau
+# negative control for `pipeline.py verify` (random code, no kernel)
+pipeline-toy-rand  24  16  10   3    91  random
+# the paper's row-1 demonstration instance (m=61, LowMS 128-bit row)
+lowms128a          61  50  25   3    44  lowms     25

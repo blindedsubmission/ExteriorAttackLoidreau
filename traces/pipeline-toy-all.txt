@@ -1,0 +1,60 @@
+
+#### pipeline `all` on 'pipeline-toy' ####
+
+=== [keygen pipeline-toy (Python)] ===
+pipeline-toy: kind=loidreau m=24 D=216 R=240 s=5 poly=0x101e6a9 key only
+=== [keygen pipeline-toy (Python)] done (2.3s) ===
+
+=== [export pipeline-toy (Python -> Rust key format)] ===
+export_rust_key: $RELEASE/instances/pipeline-toy/pipeline-toy-rs.key.bin (160 elements), poly x^24+g g=(0x1e6a9,0x0)
+=== [export pipeline-toy (Python -> Rust key format)] done (0.0s) ===
+
+=== [solve pipeline-toy (Rust kernel finder, block B=8)] ===
++ $RELEASE/rust/target/release/matrixfree-rs solve --key $RELEASE/instances/pipeline-toy/pipeline-toy-rs.key.bin --mode block --block 8 --out $RELEASE/instances/pipeline-toy/kernel.bin
+solve: --m not given, using m=24 from sibling meta.json
+solve: --n not given, using n=16 from sibling meta.json
+solve: --k not given, using k=10 from sibling meta.json
+solve: --lam not given, using lam=3 from sibling meta.json
+field: x^24+g g=(0x1e6a9,0x0) (from meta.json)
+setup: m=24 n=16 k=10 lam=3 s=6 N=560 K=120 T_and=3710 (dense 67200) | conditioning on
+[krylov] 0/243
+[approximant basis] 0/243
+[reconstruct] 0/71
+block(pmb) krylov 243 steps 288.4ms, approximant basis degs [69, 70, 70, 70, 70, 70, 70, 70] (176.4ms), batch-Horner attempt 1 -> KERNEL FOUND
+$RELEASE/instances/pipeline-toy/kernel.bin written (560 standard coords)
+total 0.5s
+=== [solve pipeline-toy (Rust kernel finder, block B=8)] done (0.6s) ===
+
+=== [recover pipeline-toy (Python Steps 1-5)] ===
+=== pipeline-toy: extracting plane from full-Pluecker kernel (C(n,lam)=560, 16-byte elements, field m=24) ===
+public key: pipeline-toy-rs.key.bin  [0.0s]
+plane contraction: ok (attempt 1/8)  [0.0s]
+plane verification: ok  [0.0s]
+step3: shift system dim 1, T invertible
+step4: twisted norm = I, fixed space dim = lam
+step5: rowsp(H_hat) == rowsp(ker G)
+key: wt(b_hat)=n, P_hat invertible -> equivalent key verified
+steps 2-5 + key  [0.1s]
+recovery: ok=True stage=done err=None
+EQUIVALENT KEY RECOVERED for pipeline-toy (loidreau key, (24;16,10,3))
+=== [recover pipeline-toy (Python Steps 1-5)] done (0.1s) ===
+
+=== [demo pipeline-toy (decrypt with the recovered key alone)] ===
+=== pipeline-toy: Loidreau PKE vs the recovered equivalent key ((24;16,10,3), t=1) ===
+=== pipeline-toy: extracting plane from full-Pluecker kernel (C(n,lam)=560, 16-byte elements, field m=24) ===
+public key: pipeline-toy-rs.key.bin  [0.0s]
+plane contraction: ok (attempt 1/8)  [0.0s]
+plane verification: ok  [0.0s]
+step3: shift system dim 1, T invertible
+step4: twisted norm = I, fixed space dim = lam
+step5: rowsp(H_hat) == rowsp(ker G)
+key: wt(b_hat)=n, P_hat invertible -> equivalent key verified
+steps 2-5 + key  [0.1s]
+recovery: ok=True stage=done err=None
+encrypting 3 ciphertext(s): t=1, masked rank lam*t=3 vs r/2=3
+trial 0: decrypted with the recovered key, (m, e) match: YES
+trial 1: decrypted with the recovered key, (m, e) match: YES
+trial 2: decrypted with the recovered key, (m, e) match: YES
+=== [demo pipeline-toy (decrypt with the recovered key alone)] done (0.2s) ===
+
+#### PASS: pipeline-toy: keygen -> solve -> recover -> decrypt all succeeded ####
